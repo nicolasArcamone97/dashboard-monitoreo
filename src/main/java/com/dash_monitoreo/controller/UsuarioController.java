@@ -18,11 +18,12 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @GetMapping()
-    public List<Usuario> obtenerUsuario(){
+    public List<Usuario> obtenerUsuario() {
         return this.usuarioService.obtenerUsuarios();
     }
 
     @PostMapping()
-    public Usuario crearUsuario(Usuario usuario){
+    public Usuario crearUsuario(Usuario usuario) {
         return this.usuarioService.crearUsuario(usuario);
     }
+}
