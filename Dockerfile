@@ -18,7 +18,10 @@ RUN chmod +x ./mvnw && ./mvnw dependency:go-offline
 COPY ./src ./src
 
 # Construir el proyecto, generando el .jar
-RUN ./mvnw clean install package -DskipTests
+# RUN ./mvnw clean install package -DskipTests
+
+COPY ./target ./target
+
 
 # Ejecutar la aplicación
-CMD ["java", "-jar", "target/dash_monitoreo-0.0.1.jar"]
+ENTRYPOINT ["java", "-jar", "target/dash_monitoreo-0.0.1.jar"]
