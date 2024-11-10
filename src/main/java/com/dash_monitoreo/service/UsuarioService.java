@@ -20,7 +20,10 @@ public class UsuarioService implements IUsuarioService {
         return this.usuarioRepository.findAll();
     }
 
-
+    @Override
+    public Usuario crearUsuario(Usuario usuario) {
+        return this.usuarioRepository.save(usuario);
+    }
 
 
 }

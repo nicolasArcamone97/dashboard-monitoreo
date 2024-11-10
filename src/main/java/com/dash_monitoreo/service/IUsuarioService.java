@@ -9,5 +9,7 @@ public interface IUsuarioService {
 
     public List<Usuario> obtenerUsuarios();
 
+    public Usuario crearUsuario(Usuario usuario);
+
 
 }
