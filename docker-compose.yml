@@ -1,6 +1,7 @@
 services:
   dash_monitoreo:
     image: dash_monitoreo
+    mem_limit: 512m
     container_name: dash_monitoreo-container
     build:
       context: .
