@@ -15,7 +15,7 @@ services:
     restart: always
 
   mysql_database:
-    image: mysql:8.0.33-slim
+    image: mysql:8.0.33
     container_name: mysql_database
     ports:
       - "3307:3306"
