@@ -1,6 +1,13 @@
 C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\controller\UsuarioController.java
 C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\DashMonitoreoApplication.java
+C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\dto\LoginDTO.java
 C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\dto\UsuarioDTO.java
+C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\exception\BadRequestException.java
+C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\exception\ConflictException.java
+C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\exception\GlobalExceptionHandler.java
+C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\exception\NotFoundException.java
+C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\exception\ResourceNotFoundException.java
+C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\exception\UnauthorizedException.java
 C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\model\Usuario.java
 C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\repository\IUsuarioRepository.java
 C:\Users\Nico\Desktop\dashboard-monitoreo\src\main\java\com\dash_monitoreo\service\IUsuarioService.java
