@@ -1,5 +1,5 @@
 # Utilizar Eclipse Temurin como base (Java 17)
-FROM eclipse-temurin:17-jre-alpine
+FROM arm64v8/eclipse-temurin:23-jre-ubi9-minimal
 
 # Puerto donde correrá la aplicación
 EXPOSE 8080
