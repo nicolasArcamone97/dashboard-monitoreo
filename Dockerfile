@@ -1,5 +1,5 @@
 # Utilizar Eclipse Temurin como base (Java 17)
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jre-alpine
 
 # Puerto donde correrá la aplicación
 EXPOSE 8080
@@ -17,12 +17,12 @@ RUN chmod +x ./mvnw && ./mvnw dependency:go-offline
 # Copiar el código fuente
 COPY ./src ./src
 
-# Construir el proyecto, generando el .jar
-# RUN ./mvnw clean install package -DskipTests
-
 COPY ./target ./target
 
+# Construir el proyecto, generando el .jar
+# RUN ./mvnw clean package -DskipTests
 
-# Ejecutar la aplicación
-ENTRYPOINT ["java", "-Xmx400m", "-Xms300m", "-jar", "target/dash_monitoreo-0.0.1.jar"]
+# Ejecutar la aplicación con optimizaciones de memoria
+ENTRYPOINT ["java", "-jar", "target/dash_monitoreo-0.0.1.jar"]
+
 

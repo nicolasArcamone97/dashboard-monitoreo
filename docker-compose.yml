@@ -1,7 +1,6 @@
 services:
   dash_monitoreo:
     image: dash_monitoreo
-    mem_limit: 512m
     container_name: dash_monitoreo-container
     build:
       context: .
@@ -28,7 +27,7 @@ services:
       MYSQL_DATABASE: dockerDB
       MYSQL_USER: nico97
       MYSQL_PASSWORD: 1111
-    mem_limit: 256m
+
 
 # Definir la red
 networks:
