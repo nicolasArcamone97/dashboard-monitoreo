@@ -76,11 +76,14 @@ public class UsuarioController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody LoginDTO usuarioLoginDTO) {
+    public ResponseEntity<?> login(@Valid @RequestBody LoginDTO usuarioLoginDTO) {
         Usuario usuario = usuarioService.login(usuarioLoginDTO);
+
         if (usuario == null) {
-            throw new NotFoundException("Usuario no encontrado");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Collections.singletonMap("message", "Usuario no encontrado"));
         }
-        return ResponseEntity.ok(usuario);
+
+        return ResponseEntity.ok(Collections.singletonMap("user", usuario));
     }
 }

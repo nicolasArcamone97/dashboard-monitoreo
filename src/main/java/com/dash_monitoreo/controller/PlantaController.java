@@ -4,6 +4,7 @@ import com.dash_monitoreo.dto.PlantaDTO;
 import com.dash_monitoreo.exception.BadRequestException;
 import com.dash_monitoreo.exception.NotFoundException;
 import com.dash_monitoreo.model.Planta;
+import com.dash_monitoreo.service.IPlantaService;
 import com.dash_monitoreo.service.PlantaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import java.util.Collections;
 public class PlantaController {
 
     @Autowired
-    PlantaService plantaService;
+    private IPlantaService plantaService;
 
 
     @GetMapping()
@@ -37,7 +38,7 @@ public class PlantaController {
         }
     }
 
-    @PostMapping("/crear")
+    @PostMapping()
     public ResponseEntity<?> crearPlanta(@Valid @RequestBody PlantaDTO planta){
         try {
             plantaService.crearPlanta(planta);
