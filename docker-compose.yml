@@ -1,12 +1,13 @@
 services:
-  amgular_app:
-    container_name: dash_monitoreo-angular
+  dash_monitoreo-angular:
+    container_name: dash_monitoreo-angular-container
     image: dash_monitoreo-angular
     build: ./angular/dashboard-monitoreo-angular
     ports:
       - "4200:4200"
     depends_on:
         - dash_monitoreo
+
   dash_monitoreo:
     image: dash_monitoreo
     container_name: dash_monitoreo-container
